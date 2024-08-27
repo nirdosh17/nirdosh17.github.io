@@ -429,6 +429,32 @@ article .icon {
   border-color: rgb(163, 163, 163);
 }
 
+/* CERTIFICATIONS SECTION */
+
+.certifications {
+  background-color: rgb(250, 250, 250);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(209, 209, 209, 0.542);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.certification-badge {
+  width: 200px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.certification-badge:hover {
+  transform: scale(1.1);
+}
+
 /* BLOGS SECTION */
 #blogs {
   position: relative;
@@ -442,7 +468,6 @@ article .icon {
 }
 
 .blog-card {
-  /* background-color: white; */
   background-color: rgb(250, 250, 250);
   border-radius: 10px;
   padding: 2rem;
@@ -468,6 +493,7 @@ article .icon {
 .blog-card p {
   margin-bottom: 1rem;
 }
+
 
 /* CONTACT */
 
