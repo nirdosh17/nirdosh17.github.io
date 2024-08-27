@@ -150,10 +150,13 @@ a:hover {
 
 section {
   padding-top: 4vh;
-  height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
+}
+
+section:not(#profile) {
+  margin-top: 50px;
 }
 
 .section-container {
@@ -273,6 +276,9 @@ section {
 }
 
 .about-containers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
@@ -308,6 +314,12 @@ section {
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
+}
+
+.experience-list {
+  flex: 1 1 400px;
+  max-width: 100%;
+  min-width: 33%
 }
 
 .section-container {
@@ -392,9 +404,10 @@ article .icon {
 }
 
 .project-img {
+  border: 1px solid #d8d8d8;
   border-radius: 1rem;
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
 }
 
 .project-title {
