@@ -150,10 +150,14 @@ a:hover {
 
 section {
   padding-top: 4vh;
-  height: 96vh;
+  min-height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
-  min-height: fit-content;
+  /* min-height: fit-content; */
+}
+
+section:not(#profile) {
+  margin-top: 50px;
 }
 
 .section-container {
@@ -177,9 +181,10 @@ section {
 }
 
 #profile-pic {
-  padding: 10px;
+  box-sizing: border-box;
   background-color: aliceblue;
   border-radius: 50%;
+  border: 10px solid aliceblue;
 }
 
 .section__text {
@@ -217,6 +222,8 @@ section {
 .icon {
   cursor: pointer;
   height: 2rem;
+  width: 2rem;
+  align-self: center;
 }
 
 /* BUTTONS */
@@ -263,10 +270,6 @@ section {
   border: rgb(255, 255, 255) 0.1rem solid;
 }
 
-.btn-container {
-  gap: 1rem;
-}
-
 /* ABOUT SECTION */
 
 #about {
@@ -274,6 +277,9 @@ section {
 }
 
 .about-containers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
@@ -300,13 +306,21 @@ section {
 }
 
 .details-container {
-  padding: 1.5rem;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
   background: white;
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
+}
+
+.experience-list {
+  flex: 1 1 400px;
+  max-width: 100%;
+  min-width: 33%;
 }
 
 .section-container {
@@ -370,10 +384,39 @@ article .icon {
   background: rgb(250, 250, 250);
 }
 
+.tags_container {
+  flex-grow: 1;
+  /* flex-wrap: wrap; */
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  min-width: 300px;
+}
+
+.tag {
+  display: inline-block;
+  background-color: rgb(0, 132, 255);
+  color: white;
+  padding: 0.3rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  margin: 0.2rem;
+}
+
 .project-img {
-  border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  border: 1px solid #d8d8d8;
+  border-radius: 1rem;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .project-img {
+    height: 150px;
+  }
 }
 
 .project-title {
@@ -384,6 +427,46 @@ article .icon {
 .project-btn {
   color: black;
   border-color: rgb(163, 163, 163);
+}
+
+/* BLOGS SECTION */
+#blogs {
+  position: relative;
+}
+
+.blogs-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.blog-card {
+  /* background-color: white; */
+  background-color: rgb(250, 250, 250);
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(209, 209, 209, 0.542);
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-icon {
+  align-items: center;
+  height: 3rem;
+  margin-bottom: 1rem;
+}
+
+.blog-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.blog-card p {
+  margin-bottom: 1rem;
 }
 
 /* CONTACT */
@@ -424,6 +507,7 @@ article .icon {
 
 .email-icon {
   height: 2.5rem;
+  width: 2.5rem;
 }
 
 /* FOOTER SECTION */

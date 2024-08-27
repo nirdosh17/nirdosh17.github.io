@@ -7,6 +7,7 @@
     <title>Nirdosh Gautam - Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
   </head>
   <body>
     <nav id="desktop-nav">
@@ -16,7 +17,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="https://medium.com/@nirdoshgautam" target="_blank">Blogs</a></li>
+          <li><a href="#blogs">Blogs</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -93,7 +94,7 @@
                 class="icon"
               />
               <h3>Experience</h3>
-              <p>8+ years <br />Backend Development</p>
+              <p>9 years <br />Backend Development</p>
             </div>
             <div class="details-container">
               <img
@@ -128,7 +129,7 @@
       <h1 class="title">Experience</h1>
       <div class="experience-details-container">
         <div class="about-containers">
-          <div class="details-container">
+          <div class="details-container experience-list">
             <h2 class="experience-sub-title">Backend Development</h2>
             <div class="article-container">
               <article>
@@ -138,10 +139,22 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Golang / Ruby on Rails</h3>
+                  <h3>Golang</h3>
                   <p>Experienced</p>
                 </div>
               </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Ruby on Rails</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+
               <article>
                 <img
                   src="./assets/checkmark.png"
@@ -188,7 +201,7 @@
               </article>
             </div>
           </div>
-          <div class="details-container">
+          <div class="details-container experience-list">
             <h2 class="experience-sub-title">DevOps</h2>
             <div class="article-container">
               <article>
@@ -248,7 +261,7 @@
               </article>
             </div>
           </div>
-          <div class="details-container">
+          <div class="details-container experience-list">
             <h2 class="experience-sub-title">Frontend Development</h2>
             <div class="article-container">
               <article>
@@ -312,7 +325,7 @@
       <div class="experience-details-container">
         <div class="about-containers">
           <!-- project 1 -->
-          <div class="details-container color-container">
+          <div class="details-container color-container project-list-item">
             <div class="article-container">
               <img
                 src="./assets/project_cfn_teardown.png"
@@ -321,6 +334,14 @@
               />
             </div>
             <h2 class="experience-sub-title project-title">CFN Teardown</h2>
+            <div class="tags_container">
+              <div class="tag">Go</div>
+              <div class="tag">AWS</div>
+              <div class="tag">DevOps</div>
+              <div class="tag">CLI</div>
+              <div class="tag">CloudFormation</div>
+              <div class="tag">Infra as Code</div>
+            </div>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -331,7 +352,7 @@
             </div>
           </div>
           <!-- project 2 -->
-          <div class="details-container color-container">
+          <div class="details-container color-container project-list-item">
             <div class="article-container">
               <img
                 src="./assets/project_go_playground.png"
@@ -340,6 +361,12 @@
               />
             </div>
             <h2 class="experience-sub-title project-title">Go Playground</h2>
+            <div class="tags_container">
+              <div class="tag">Go</div>
+              <div class="tag">React</div>
+              <div class="tag">Docker</div>
+              <div class="tag">Linux</div>
+            </div>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -355,63 +382,128 @@
               </button>
             </div>
           </div>
-          <!-- project 3 -->
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project_tracer.png"
-                alt="Project Packet Tracer"
-                class="project-img"
-              />
+            <!-- project 3 -->
+            <div class="details-container color-container project-list-item">
+              <div class="article-container">
+                <img
+                  src="./assets/project_tracer.png"
+                  alt="Project Packet Tracer"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Packet Tracer</h2>
+              <div class="tags_container">
+                <div class="tag">Go</div>
+                <div class="tag">CLI</div>
+                <div class="tag">Networking</div>
+              </div>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="window.open('https://github.com/nirdosh17/tracer', '_blank')"
+                >
+                  Github
+                </button>
+              </div>
             </div>
-            <h2 class="experience-sub-title project-title">Packet Tracer</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/nirdosh17/tracer', '_blank')"
-              >
-                Github
-              </button>
+            <!-- project 4 -->
+            <div class="details-container color-container project-list-item">
+              <div class="article-container">
+                <img
+                  src="./assets/project_go_sdk_template.png"
+                  alt="Project Go SDK Template"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Go SDK Template</h2>
+              <div class="tags_container">
+                <div class="tag">Go</div>
+                <div class="tag">SDK</div>
+              </div>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="window.open('https://github.com/nirdosh17/go-sdk-template', '_blank')"
+                >
+                  Github
+                </button>
+              </div>
             </div>
-          </div>
-          <!-- project 4 -->
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project_go_sdk_template.png"
-                alt="Project Go SDK Template"
-                class="project-img"
-              />
+            <!-- project 5 -->
+            <div class="details-container color-container project-list-item">
+              <div class="article-container">
+                <img
+                  src="./assets/project_go_lsp.png"
+                  alt="Project Go LSP"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Go Language Server</h2>
+              <div class="tags_container">
+                <div class="tag">Go</div>
+                <div class="tag">LSP</div>
+                <div class="tag">Neovim</div>
+              </div>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="window.open('https://github.com/nirdosh17/golsp', '_blank')"
+                >
+                  Github
+                </button>
+              </div>
             </div>
-            <h2 class="experience-sub-title project-title">Go SDK Template</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/nirdosh17/go-sdk-template', '_blank')"
-              >
-                Github
-              </button>
+            <!-- project 6 -->
+            <div class="details-container color-container project-list-item">
+              <div class="article-container">
+                <img
+                  src="./assets/project_cv.png"
+                  alt="Project Computer Vision"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Computer Vision</h2>
+              <div class="tags_container">
+                <div class="tag">Python</div>
+                <div class="tag">OpenCV</div>
+              </div>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="window.open('https://github.com/nirdosh17/computer-vision-examples', '_blank')"
+                >
+                  Github
+                </button>
+              </div>
             </div>
-          </div>
-          <!-- project 5 -->
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project_python_cv.png"
-                alt="Project Computer Vision"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Computer Vision</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/nirdosh17/computer-vision-examples', '_blank')"
-              >
-                Github
-              </button>
-            </div>
-          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#blogs'"
+      />
+    </section>
+    <section id="blogs">
+      <p class="section__text__p1">Read My</p>
+      <h1 class="title">Blogs</h1>
+      <div class="blogs-container">
+        <div class="blog-card">
+          <img src="./assets/medium-icon.png" alt="Medium icon" class="blog-icon" />
+          <p>Check out my articles on</p>
+          <h3>Medium</h3>
+          <button class="btn btn-color-2" onclick="window.open('https://medium.com/@nirdoshgautam', '_blank')">
+            Read
+          </button>
+        </div>
+        <div class="blog-card">
+          <img src="./assets/hashnode-icon.png" alt="Hashnode icon" class="blog-icon" />
+          <p>Check out my articles on</p>
+          <h3>Hashnode</h3>
+          <button class="btn btn-color-2" onclick="window.open('https://nirdoshgautam.hashnode.dev', '_blank')">
+            Read
+          </button>
         </div>
       </div>
       <img
@@ -441,6 +533,14 @@
           />
           <p><a href="https://www.linkedin.com/in/nirdosh-gautam">LinkedIn</a></p>
         </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/github.png"
+            alt="Github icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://github.com/nirdosh17">Github</a></p>
+        </div>
       </div>
     </section>
     <footer>
@@ -450,7 +550,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="https://medium.com/@nirdoshgautam" target="_blank">Blogs</a></li>
+            <li><a href="#blogs">Blogs</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
