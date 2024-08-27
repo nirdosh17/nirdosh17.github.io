@@ -325,159 +325,16 @@
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
       <div class="experience-details-container">
-        <div class="about-containers">
-          <!-- project 1 -->
-          <div class="details-container color-container project-list-item">
-            <div class="article-container">
-              <img
-                src="./assets/project_cfn_teardown.png"
-                alt="Project CFN Teardown"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">CFN Teardown</h2>
-            <div class="tags_container">
-              <div class="tag">Go</div>
-              <div class="tag">AWS</div>
-              <div class="tag">DevOps</div>
-              <div class="tag">CLI</div>
-              <div class="tag">CloudFormation</div>
-              <div class="tag">Infra as Code</div>
-            </div>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/nirdosh17/cfn-teardown', '_blank')"
-              >
-                Github
-              </button>
-            </div>
-          </div>
-          <!-- project 2 -->
-          <div class="details-container color-container project-list-item">
-            <div class="article-container">
-              <img
-                src="./assets/project_go_playground.png"
-                alt="Project Go Playground"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Go Playground</h2>
-            <div class="tags_container">
-              <div class="tag">Go</div>
-              <div class="tag">React</div>
-              <div class="tag">Docker</div>
-              <div class="tag">Linux</div>
-            </div>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/nirdosh17/go-sandbox', '_blank')"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://goplayground.dev/', '_blank')"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-            <!-- project 3 -->
-            <div class="details-container color-container project-list-item">
-              <div class="article-container">
-                <img
-                  src="./assets/project_tracer.png"
-                  alt="Project Packet Tracer"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title">Packet Tracer</h2>
-              <div class="tags_container">
-                <div class="tag">Go</div>
-                <div class="tag">CLI</div>
-                <div class="tag">Networking</div>
-              </div>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="window.open('https://github.com/nirdosh17/tracer', '_blank')"
-                >
-                  Github
-                </button>
-              </div>
-            </div>
-            <!-- project 4 -->
-            <div class="details-container color-container project-list-item">
-              <div class="article-container">
-                <img
-                  src="./assets/project_go_sdk_template.png"
-                  alt="Project Go SDK Template"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title">Go SDK Template</h2>
-              <div class="tags_container">
-                <div class="tag">Go</div>
-                <div class="tag">SDK</div>
-              </div>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="window.open('https://github.com/nirdosh17/go-sdk-template', '_blank')"
-                >
-                  Github
-                </button>
-              </div>
-            </div>
-            <!-- project 5 -->
-            <div class="details-container color-container project-list-item">
-              <div class="article-container">
-                <img
-                  src="./assets/project_go_lsp.png"
-                  alt="Project Go LSP"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title">Go Language Server</h2>
-              <div class="tags_container">
-                <div class="tag">Go</div>
-                <div class="tag">LSP</div>
-                <div class="tag">Neovim</div>
-              </div>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="window.open('https://github.com/nirdosh17/golsp', '_blank')"
-                >
-                  Github
-                </button>
-              </div>
-            </div>
-            <!-- project 6 -->
-            <div class="details-container color-container project-list-item">
-              <div class="article-container">
-                <img
-                  src="./assets/project_cv.png"
-                  alt="Project Computer Vision"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title">Computer Vision</h2>
-              <div class="tags_container">
-                <div class="tag">Python</div>
-                <div class="tag">OpenCV</div>
-              </div>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="window.open('https://github.com/nirdosh17/computer-vision-examples', '_blank')"
-                >
-                  Github
-                </button>
-              </div>
-            </div>
+        <div class="about-containers" id="project-container">
+          <!-- Projects will be dynamically inserted here -->
+        </div>
+        <div class="about-containers" id="hidden-projects" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out;">
+          <!-- Additional projects will be inserted here -->
+        </div>
+        <div class="btn-container" id="show-more-container">
+          <button class="btn btn-color-2" onclick="toggleProjects()">
+            Show More
+          </button>
         </div>
       </div>
       <img
@@ -490,7 +347,7 @@
     <section id="certifications">
       <p class="section__text__p1">View My</p>
       <h1 class="title">Certifications</h1>
-      <div class="certifications">
+      <div class="certifications-container">
         <a href="https://www.credly.com/badges/f95d494c-6b83-4a86-8d74-72dcb9058452/public_url" target="_blank">
           <img src="./assets/cert_aws.png" alt="AWS Certified Solutions Architect - Associate" class="certification-badge" />
         </a>
