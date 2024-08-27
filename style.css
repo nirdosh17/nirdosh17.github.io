@@ -150,9 +150,10 @@ a:hover {
 
 section {
   padding-top: 4vh;
+  min-height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
-  min-height: fit-content;
+  /* min-height: fit-content; */
 }
 
 section:not(#profile) {
@@ -319,7 +320,7 @@ section:not(#profile) {
 .experience-list {
   flex: 1 1 400px;
   max-width: 100%;
-  min-width: 33%
+  min-width: 33%;
 }
 
 .section-container {
@@ -385,10 +386,11 @@ article .icon {
 
 .tags_container {
   flex-grow: 1;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   gap: 0.5rem;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
+  min-width: 300px;
 }
 
 .tag {
@@ -407,7 +409,14 @@ article .icon {
   border: 1px solid #d8d8d8;
   border-radius: 1rem;
   width: 100%;
-  height: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .project-img {
+    height: 150px;
+  }
 }
 
 .project-title {
@@ -418,6 +427,46 @@ article .icon {
 .project-btn {
   color: black;
   border-color: rgb(163, 163, 163);
+}
+
+/* BLOGS SECTION */
+#blogs {
+  position: relative;
+}
+
+.blogs-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.blog-card {
+  /* background-color: white; */
+  background-color: rgb(250, 250, 250);
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(209, 209, 209, 0.542);
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-icon {
+  align-items: center;
+  height: 3rem;
+  margin-bottom: 1rem;
+}
+
+.blog-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.blog-card p {
+  margin-bottom: 1rem;
 }
 
 /* CONTACT */
