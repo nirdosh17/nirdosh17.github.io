@@ -270,6 +270,22 @@ section:not(#profile) {
   border: rgb(255, 255, 255) 0.1rem solid;
 }
 
+/* button styles */
+
+.btn-color-2.gradient-btn {
+  background: linear-gradient(45deg, #4a00e0, #8e2de2);
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-color-2.gradient-btn:hover {
+  background: linear-gradient(45deg, #5c16e0, #9d48e2);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
 /* ABOUT SECTION */
 
 #about {
