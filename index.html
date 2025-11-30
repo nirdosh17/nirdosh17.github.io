@@ -312,18 +312,23 @@
   <section id="blogs">
     <p class="section__text__p1">Read My</p>
     <h1 class="title">Blogs</h1>
-    <div class="blogs-container">
-      <div class="blog-card">
-        <img src="./assets/medium-icon.png" alt="Medium icon" class="blog-icon" />
-        <button class="btn btn-color-2" onclick="window.open('https://medium.com/@nirdoshgautam', '_blank')">
-          Read
-        </button>
+    <div class="blogs-wrapper">
+      <!-- First Row: Platform Cards -->
+      <div class="blogs-platforms-container">
+        <a href="https://medium.com/@nirdoshgautam" target="_blank" rel="noopener noreferrer" class="blog-platform-link">
+          <img src="./assets/medium-icon.png" alt="Medium icon" class="blog-platform-icon" />
+        </a>
+        <div class="blog-platform-divider"></div>
+        <a href="https://nirdoshgautam.hashnode.dev" target="_blank" rel="noopener noreferrer" class="blog-platform-link">
+          <img src="./assets/hashnode-icon.png" alt="Hashnode icon" class="blog-platform-icon blog-platform-icon-hashnode" />
+        </a>
       </div>
-      <div class="blog-card">
-        <img src="./assets/hashnode-icon.png" alt="Hashnode icon" class="blog-icon" />
-        <button class="btn btn-color-2" onclick="window.open('https://nirdoshgautam.hashnode.dev', '_blank')">
-          Read
-        </button>
+      <!-- Second Row: Recent Blogs List -->
+      <div class="blogs-list-container">
+        <h2 class="blogs-list-title">Recent Posts</h2>
+        <div id="blogs-list" class="blogs-list">
+          <!-- Blog posts will be dynamically inserted here -->
+        </div>
       </div>
     </div>
     <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />

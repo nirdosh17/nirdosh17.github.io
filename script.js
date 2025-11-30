@@ -137,6 +137,9 @@ window.addEventListener("load", () => {
 
   // Initialize scroll animations
   initScrollAnimations();
+
+  // Load Medium blog posts
+  loadMediumBlogs();
 });
 
 // Scroll Animations
@@ -165,11 +168,61 @@ function initScrollAnimations() {
   });
 
   // Observe cards and containers
-  const animatedElements = document.querySelectorAll('.details-container, .color-container, .blog-card');
+  const animatedElements = document.querySelectorAll('.details-container, .color-container, .blog-platform-link, .blog-post-item');
   animatedElements.forEach((element) => {
     element.style.opacity = '0';
     element.style.transform = 'translateY(20px)';
     element.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
     observer.observe(element);
   });
+}
+
+// Load Medium Blog Posts
+async function loadMediumBlogs() {
+  const blogsList = document.getElementById('blogs-list');
+  if (!blogsList) return;
+
+  // Show loading state
+  blogsList.innerHTML = '<div class="blogs-loading">Loading recent posts...</div>';
+
+  try {
+    // Medium RSS feed URL - Medium uses @username format
+    const mediumUsername = 'nirdoshgautam';
+    const rssUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(`https://medium.com/feed/@${mediumUsername}`)}`;
+
+    const response = await fetch(rssUrl);
+
+    if (!response.ok) {
+      throw new Error('Failed to fetch blog posts');
+    }
+
+    const data = await response.json();
+
+    if (data.status === 'ok' && data.items && data.items.length > 0) {
+      // Display up to 5 recent posts
+      const posts = data.items.slice(0, 5);
+
+      blogsList.innerHTML = posts.map(post => {
+        const title = post.title || 'Untitled';
+        const link = post.link || '#';
+        const pubDate = post.pubDate ? new Date(post.pubDate).toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric'
+        }) : '';
+
+        return `
+          <a href="${link}" target="_blank" rel="noopener noreferrer" class="blog-post-item">
+            <div class="blog-post-title">${title}</div>
+            ${pubDate ? `<div class="blog-post-date">${pubDate}</div>` : ''}
+          </a>
+        `;
+      }).join('');
+    } else {
+      throw new Error('No blog posts found');
+    }
+  } catch (error) {
+    console.error('Error loading Medium blogs:', error);
+    blogsList.innerHTML = '<div class="blogs-error">Unable to load recent posts. <a href="https://medium.com/@nirdoshgautam" target="_blank" style="color: var(--color-accent-purple);">Visit Medium</a> to read my articles.</div>';
+  }
 }
