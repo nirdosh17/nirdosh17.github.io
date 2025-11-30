@@ -128,4 +128,10 @@ window.addEventListener("load", () => {
   projectData.slice(0, numProjectsToShow).forEach(project => {
     container.appendChild(createProjectElement(project));
   });
+
+  // Set copyright year dynamically
+  const copyrightYear = document.getElementById("copyright-year");
+  if (copyrightYear) {
+    copyrightYear.textContent = new Date().getFullYear();
+  }
 });
