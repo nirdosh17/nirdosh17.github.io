@@ -247,7 +247,9 @@ a:hover::after {
 section {
   padding-top: 4vh;
   min-height: 96vh;
-  margin: 0 10rem;
+  width: 70%;
+  max-width: 1200px;
+  margin: 0 auto;
   position: relative;
   z-index: 1;
 }
@@ -301,7 +303,7 @@ section:not(#profile) {
   height: 100%;
   object-fit: contain;
   object-position: center center;
-  padding: 20px;
+  padding: 10px;
 }
 
 #profile-pic:hover {
