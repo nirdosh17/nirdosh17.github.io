@@ -7,11 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nirdosh Gautam - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="animations.css" />
   <link rel="stylesheet" href="mediaqueries.css" />
   <link rel="icon" type="image/png" href="./assets/favicon.png" />
 </head>
 
 <body>
+  <!-- Animated Background Orbs -->
+  <div class="bg-orb bg-orb-1"></div>
+  <div class="bg-orb bg-orb-2"></div>
+  <div class="bg-orb bg-orb-3"></div>
+
   <nav id="desktop-nav">
     <div class="logo">Nirdosh Gautam</div>
     <div>
@@ -50,7 +56,7 @@
     <div class="section__text">
       <p class="section__text__p1">Hello, I'm</p>
       <h1 class="title">Nirdosh Gautam</h1>
-      <p class="section__text__p2">Senior Backend Developer</p>
+      <p class="section__text__p2">Senior Backend Engineer</p>
       <div class="btn-container">
         <button class="btn btn-color-2 gradient-btn" onclick="window.open('./assets/cv_nirdosh.pdf')">
           Download CV
@@ -79,7 +85,7 @@
           <div class="details-container">
             <img src="./assets/experience.png" alt="Experience icon" class="icon" />
             <h3>Experience</h3>
-            <p>9 years <br />Backend Development</p>
+            <p>10 years <br />Backend Development</p>
           </div>
           <div class="details-container">
             <img src="./assets/education.png" alt="Education icon" class="icon" />
@@ -91,7 +97,7 @@
         </div>
         <div class="text-container">
           <p>
-            Software Engineer from Nepal🇳🇵 with 9 years of experience specializing in backend development using Go and
+            Software Engineer from Nepal🇳🇵 with 10 years of experience specializing in backend development using Go and
             Ruby on Rails with modern cloud-native architectures in AWS.
             Proven expertise in solution design and full-stack ownership, blending backend development with robust
             DevOps and Platform engineering.
@@ -112,14 +118,12 @@
           <h2 class="experience-sub-title">Backend Development</h2>
           <div class="article-container">
             <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
               <div>
                 <h3>Golang</h3>
                 <p>Experienced</p>
               </div>
             </article>
             <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
               <div>
                 <h3>Ruby on Rails</h3>
                 <p>Experienced</p>
@@ -127,28 +131,24 @@
             </article>
 
             <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
               <div>
                 <h3>API Development</h3>
                 <p>Experienced</p>
               </div>
             </article>
             <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
               <div>
                 <h3>Microservices</h3>
                 <p>Experienced</p>
               </div>
             </article>
             <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
               <div>
                 <h3>System Design</h3>
                 <p>Experienced</p>
               </div>
             </article>
             <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
               <div>
                 <h3>Analytics</h3>
                 <p>Intermediate</p>
@@ -160,35 +160,30 @@
           <h2 class="experience-sub-title">DevOps</h2>
           <div class="article-container">
             <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
               <div>
                 <h3>Infra as Code</h3>
                 <p>Experienced</p>
               </div>
             </article>
             <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
               <div>
                 <h3>Dev Tooling</h3>
                 <p>Experienced</p>
               </div>
             </article>
             <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
               <div>
                 <h3>CI/CD</h3>
                 <p>Experienced</p>
               </div>
             </article>
             <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
               <div>
                 <h3>Observability</h3>
                 <p>Experienced</p>
               </div>
             </article>
             <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
               <div>
                 <h3>Networking</h3>
                 <p>Intermediate</p>
@@ -197,38 +192,81 @@
           </div>
         </div>
         <div class="details-container experience-list">
-          <h2 class="experience-sub-title">Frontend Development</h2>
+          <h2 class="experience-sub-title">AWS</h2>
           <div class="article-container">
             <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
               <div>
-                <h3>React</h3>
-                <p>Intermediate</p>
+                <h3>IAM</h3>
               </div>
             </article>
             <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
               <div>
-                <h3>Node JS</h3>
-                <p>Intermediate</p>
+                <h3>VPC</h3>
               </div>
             </article>
-            <!-- <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article> -->
             <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
               <div>
-                <h3>HTML/CSS</h3>
-                <p>Intermediate</p>
+                <h3>EC2</h3>
+              </div>
+            </article>
+            <article>
+              <div>
+                <h3>S3</h3>
+              </div>
+            </article>
+            <article>
+              <div>
+                <h3>ECS</h3>
+              </div>
+            </article>
+            <article>
+              <div>
+                <h3>DynamoDB</h3>
+              </div>
+            </article>
+            <article>
+              <div>
+                <h3>Aurora/RDS - Postgres</h3>
+              </div>
+            </article>
+            <article>
+              <div>
+                <h3>CloudWatch</h3>
+              </div>
+            </article>
+            <article>
+              <div>
+                <h3>CloudFormation (IAC)</h3>
+              </div>
+            </article>
+            <article>
+              <div>
+                <h3>Cognito</h3>
+              </div>
+            </article>
+            <article>
+              <div>
+                <h3>Lambda</h3>
+              </div>
+            </article>
+            <article>
+              <div>
+                <h3>SQS/SNS</h3>
+              </div>
+            </article>
+            <article>
+              <div>
+                <h3>API Gateway</h3>
+              </div>
+            </article>
+            <article>
+              <div>
+                <h3>ALB</h3>
+              </div>
+            </article>
+            <article>
+              <div>
+                <h3>Amplify</h3>
               </div>
             </article>
           </div>
@@ -277,16 +315,12 @@
     <div class="blogs-container">
       <div class="blog-card">
         <img src="./assets/medium-icon.png" alt="Medium icon" class="blog-icon" />
-        <p>Check out my articles on</p>
-        <h3>Medium</h3>
         <button class="btn btn-color-2" onclick="window.open('https://medium.com/@nirdoshgautam', '_blank')">
           Read
         </button>
       </div>
       <div class="blog-card">
         <img src="./assets/hashnode-icon.png" alt="Hashnode icon" class="blog-icon" />
-        <p>Check out my articles on</p>
-        <h3>Hashnode</h3>
         <button class="btn btn-color-2" onclick="window.open('https://nirdoshgautam.hashnode.dev', '_blank')">
           Read
         </button>
@@ -313,18 +347,6 @@
     </div>
   </section>
   <footer>
-    <nav>
-      <div class="nav-links-container">
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#certifications">Certifications</a></li>
-          <li><a href="#blogs">Blogs</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
     <p>Copyright &#169; <span id="copyright-year"></span> Nirdosh Gautam. All Rights Reserved.</p>
   </footer>
   <script src="script.js"></script>

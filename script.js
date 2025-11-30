@@ -134,4 +134,42 @@ window.addEventListener("load", () => {
   if (copyrightYear) {
     copyrightYear.textContent = new Date().getFullYear();
   }
+
+  // Initialize scroll animations
+  initScrollAnimations();
 });
+
+// Scroll Animations
+function initScrollAnimations() {
+  const observerOptions = {
+    threshold: 0.05,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, observerOptions);
+
+  // Observe all sections
+  const sections = document.querySelectorAll('section');
+  sections.forEach(section => {
+    section.style.opacity = '0';
+    section.style.transform = 'translateY(20px)';
+    section.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+    observer.observe(section);
+  });
+
+  // Observe cards and containers
+  const animatedElements = document.querySelectorAll('.details-container, .color-container, .blog-card');
+  animatedElements.forEach((element) => {
+    element.style.opacity = '0';
+    element.style.transform = 'translateY(20px)';
+    element.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+    observer.observe(element);
+  });
+}

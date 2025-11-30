@@ -48,9 +48,12 @@
 }
 
 @media screen and (max-width: 600px) {
-  #contact,
-  footer {
+  #contact {
     height: 40vh;
+  }
+  footer {
+    min-height: 60px;
+    padding: 1.5rem 0;
   }
   #profile {
     height: 83vh;
@@ -87,8 +90,9 @@
     text-align: center;
   }
   .section__pic-container {
-    width: auto;
-    height: 46vw;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto 2rem;
     justify-content: center;
   }
   .section__text__p2 {
